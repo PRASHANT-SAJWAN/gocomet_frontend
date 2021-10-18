@@ -6,8 +6,7 @@ const crawlBlogData = async (tag) => {
         let response = await axios.get('https://gocomet-web-scrapper.herokuapp.com/tag/' + tag, {
             params: { tag: tag },
             crossDomain: true,
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
+            headers: { 'Content-Type': 'application/json' },
         });
 
         return response.data;

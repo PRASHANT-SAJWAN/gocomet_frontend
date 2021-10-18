@@ -5,7 +5,7 @@ import crawlBlogData from '../Controller/Search';
 import BlogView from './BlogView';
 
 function Search() {
-    const [tag, setTag] = useState("culture");
+    const [tag, setTag] = useState("");
     // const [error, setError] = useState("");
     const [blogs, setBlogs] = useState([]);
     const [history, setHistory] = useState([]);
