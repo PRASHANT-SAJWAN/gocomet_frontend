@@ -3,7 +3,7 @@ import axios from "axios";
 const crawlBlogData = async (tag) => {
     console.log('crawling tag data');
     try {
-        let response = await axios.get('http://localhost:5000/tag/' + tag, {
+        let response = await axios.get('https://gocomet-web-scrapper.herokuapp.com/tag/' + tag, {
             params: { tag: tag },
             crossDomain: true,
             method: 'POST',

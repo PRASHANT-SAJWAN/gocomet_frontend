@@ -40,11 +40,13 @@ function Search() {
             {
                 blogs === null || blogs === undefined ?
                     <div>No Results Found</div> :
-                    <div>{blogs.map((blog) => {
-                        return (
-                            <BlogView key={blog.details} blog={blog}></BlogView>
-                        )
-                    })}</div>
+                    (blogs === [] ? <div>Loading</div> :
+                        <div>{blogs.map((blog) => {
+                            return (
+                                <BlogView key={blog.details} blog={blog}></BlogView>
+                            )
+                        })}
+                        </div>)
             }
         </form>
     )
