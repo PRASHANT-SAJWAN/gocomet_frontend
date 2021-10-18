@@ -7,7 +7,7 @@ const crawlBlogData = async (tag) => {
             params: { tag: tag },
             crossDomain: true,
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
         });
 
         return response.data;
